@@ -1,0 +1,18 @@
+
+Na budowie pracuje dwóch robotników, którzy mają za zadanie przenosić bloki o różnych wagach.
+Jako kierownik budowy masz do dyspozycji n bloków, które musisz podzielić między pracowników tak, aby spełnić założenia.
+
+Wersja I 
+Chcemy przydzielić każdemu z robotników bloki o łącznej wadze k.
+Każdy z nich może dostać różną liczbę bloków do przeniesienia. Nie wszystkie bloki muszą zostać wybrane.
+1.5 pkt - przechodzą zwykłe testy
+0.5 pkt - przechodzą testy wydajnościowe
+
+Wersja II
+W przypadku, gdy możliwych jest wiele sprawiedliwych podziałów (opisanych powyżej), wybrać taki,
+dla którego różnica liczby bloków przypisanych robotnikom jest minimalna. 
+1.5 pkt - przechodzą zwykłe testy
+0.5 pkt - przechodzą testy wydajnościowe
+
+Wskazówka:
+Zastosuj algorytm z powrotami.

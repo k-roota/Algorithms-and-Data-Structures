@@ -1,0 +1,39 @@
+﻿
+Firma wygrała przetarg na budowę K obiektów (stacje benzynowe, sklepy, parkingi itd.) wzdłuż autostrady.
+Mamy N lokalizacji (numer kilometra na autostradzie), w których obiekty można wybudować.
+Trzeba wybrać takie lokalizacje, aby minimalny dystans pomiędzy dowolnymi dwoma obiektami był maksymalny.
+Zaprojektuj algorytm, który znajdzie ten dystans oraz zwróci lokalizacje, w których firma powinna wybudować obiekty.
+Możliwe jest wybudowanie wielu obiektów na tym samym kilometrze autostrady.
+Autostrada może być baaaaaardzo długa (int.MaxValue km!!!) oraz można na niej wybudować maksymalnie 100000 obiektów.
+Zakładamy, że lokalizacje są podane w rosnąco posortowanej kolejności.
+
+Zakres danych:
+1 < N <= 100000
+1 < K <= N
+0 <= a[i] <= int.MaxValue, a[i] - elementy tablicy wejściowej, numer kilometra autostrady.
+
+W przypadku gdy dane są spoza zakresu, metoda powinna zgłosić wyjątek ArgumentExcepion.
+
+Przykład:
+
+wejście: 
+tablica a[] =  {1, 2, 4, 8, 9}, k = 3
+wyjście:
+3 - dla elementów {1, 4, 8} albo {1, 4, 9}
+
+wejście: 
+tablica a[] =  {1, 2, 5, 7, 11, 12}, k = 3
+wyjście:
+5 - elementy {1,7,12} 
+
+Oczekiwana złożoność: O(NlogD), gdzie D to maksymalny dystans, w którym można umieścić obiekty od siebie.
+
+punktacja:
+- funkcja pomocnicza CanPlaceElementsInDistance   -  0.5
+- testy Easy                                      -  1.0
+- testy Medium                                    -  1.0
+- testy Hard (wydajnościowe)                      -  1.5
+
+Wskazówki: 
+Jaki może być maksymalny a jaki minimalny dystans pomiędzy obiektami?
+Jak sprawdzić czy da się ustawić K obiektów spośród N w zadanej odległości od siebie?

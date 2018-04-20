@@ -1,0 +1,58 @@
+﻿Dany jest labirynt reprezentowany przez dwuwymiarową tablicę typu char - na przykład:
+XSOOOOO
+XXXXXOX
+OOOOOOO
+OXXXXXX
+OOOEXOO
+
+S - punkt startowy
+E - punkt końcowy
+X - ściany
+O - droga
+
+Wersja I - Rozgrzewka (1 pkt.)
+Wyznaczyć najkrótszy czas, w jakim można dotrzeć z punktu S do E poruszając się tylko pod drodze.
+Poruszanie możliwe jest tylko o jedno pole w dół, w górę, w lewo lub w prawo.
+Przejście pomiędzy sąsiednimi polami zajmuje 1 jednostkę czasu.
+Jeśli dojście do punktu końcowego nie jest możliwe zwróć -1.
+
+Wersja II - Wybuchowa (1 pkt.)
+Mamy dynamit (potencjalnie nieskończoną jego ilość), za pomocą którego możemy burzyć ściany.
+Zburzenie ściany i przejście na pole, na którym się znajdowała zajmuje t jednostek czasu.
+Wejście na droge z pola po zburzonej ścianie zajmuje 1 jednostkę czasu.
+Wyznaczyć najkrótszy czas w jakim można przejść labirynt z użyciem dynamitów.
+
+Wersja III - 1 dynamit (1 pkt.)
+Do dyspozycji mamy tylko 1 sztukę dynamitu.
+Pozostałe założenia jak w poprzednich wersjach.
+Wyznaczyć najkrótszy czas w jakim można przejść labirynt z użyciem co najwyżej 1 dynamitu.
+
+Wersja IV - k dynamitów (1 pkt.)
+Do dyspozycji mamy dokładnie k sztuk dynamitu.
+Pozostałe założenia jak w poprzednich wersjach.
+Wyznaczyć najkrótszy czas w jakim można przejść labirynt z użyciem co najwyżej k sztuk dynamitu.
+
+UWAGA: Na laboratorium nie trzeba wyznaczać ścieżki realizującej najkrótszy czas przejścia przez
+labitynt (w żadnym z wariantów), trzeba będzie to zrobić w częsci domowej.
+
+Oczekiwana złożoność wersji I, II, III:   O(n log(n)), gdzie n to liczba pól labiryntu.
+Oczekiwana złożoność wersji IV:           O(nk log(nk)), gdzie n to liczba pól labiryntu,
+                                                         a k to liczba dostępnych dynamitów.
+
+Wskazówka do wszystkich wersji:
+- Główny element zadania to stworzenie z labirytnu odpowiedniego grafu
+- Można korzystać z bibliotecznych metod wyznaczania najkrótszych ścieżek.
+
+Wskazówka do wersji III i IV:
+- Stworzony graf powinien składać się z k+1 "warstw", kolejne warstwy odpowiadają kolejnym użyciom dynamitu
+
+
+Część domowa:
+Oprócz realizacji powyższych poleceń w części domowej rozwiązania należy dodać wyznaczanie
+znalezionej ścieżki w postaci stringa składającego się z kolejnych kierunków świata 
+(N - północ, S - południe, E - wschód, W - zachód), w jakich należy podążać od punktu startowego 
+do punktu końcowego, aby osiągnąć wartość zwróconego rozwiązania.
+Przykład:
+Dla labiryntu z treści zadania bez dynamitów należy zwrócić: EEEESSWWWWWSSEEE
+
+Aby przetestować poprawność zwracanej ścieżki w Mainie zmień wartość parametru checkPath na true.
